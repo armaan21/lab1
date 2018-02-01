@@ -206,7 +206,7 @@ Invalid_argument exception for instance.
 
 let check = fun l ->
   match l with
-  | [] -> 0
+  | [] -> raise (Invalid_argument "no list present")
   | h::t -> List.fold_left max h t;;
 let max_list (lst : int list) : int =
   check lst;;
